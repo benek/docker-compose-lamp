@@ -10,10 +10,10 @@ RUN printf "deb http://archive.debian.org/debian/ stretch main\n" > /etc/apt/sou
     printf "deb http://archive.debian.org/debian-security stretch/updates main\n" >>  /etc/apt/sources.list && \
     printf "deb-src http://archive.debian.org/debian-security stretch/updates main" >>  /etc/apt/sources.list
 
-RUN apt-get -y update && apt-get upgrade -y
+RUN apt-get -y --allow-unauthenticated update && apt-get upgrade -y --allow-unauthenticated
 
 # Install tools && libraries
-RUN apt-get -y install --fix-missing nano wget dialog \
+RUN apt-get -y --allow-unauthenticated install --fix-missing nano wget dialog \
     build-essential git curl libcurl3 libcurl3-dev zip \
     libmcrypt-dev libsqlite3-dev libsqlite3-0 mysql-client \
     zlib1g-dev libicu-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
