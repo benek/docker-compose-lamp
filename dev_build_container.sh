@@ -10,7 +10,7 @@
 
 dc=$(which docker-compose)
 osversion=$(uname)
-dbarr=(mariadb103 mariadb104 mariadb105 mariadb106 mysql57 mysql8)
+dbarr=(mariadb100 mariadb104 mariadb105 mariadb106 mysql57 mysql8)
 
 checkdep() {
 
